@@ -5,12 +5,292 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="아메리카노" />
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="주문하실 음료를 선택해주세요." />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+        <!-- 아메리카노 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="아메리카노" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="1900원" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/min_btn_Americano"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="-"
+                    android:onClick="decrement_Americano"/>
+
+                <TextView
+                    android:id="@+id/quantity_Americano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingHorizontal="15dp"/>
+
+                <Button
+                    android:id="@+id/plus_btn_Americano"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="+"
+                    android:onClick="increment_Americano"/>
+            </LinearLayout>
+        </TableRow>
+        <!-- 카페모카 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="카페모카" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="3500원" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/min_btn_CaffeMocha"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="-"
+                    android:onClick="decrement_CaffeMocha"/>
+
+                <TextView
+                    android:id="@+id/quantity_CaffeMocha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingHorizontal="15dp"/>
+
+                <Button
+                    android:id="@+id/plus_btn_CaffeMocha"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="+"
+                    android:onClick="increment_CaffeMocha"/>
+            </LinearLayout>
+        </TableRow>
+        <!-- 아이스티 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="아이스티" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="2000원" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/min_btn_IcedTea"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="-"
+                    android:onClick="decrement_IcedTea"/>
+
+                <TextView
+                    android:id="@+id/quantity_IcedTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingHorizontal="15dp"/>
+
+                <Button
+                    android:id="@+id/plus_btn_IcedTea"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="+"
+                    android:onClick="increment_IcedTea"/>
+            </LinearLayout>
+        </TableRow>
+        <!-- 카페라떼 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="카페라떼" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="3000원" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/min_btn_CaffeLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="-"
+                    android:onClick="decrement_CaffeLatte"/>
+
+                <TextView
+                    android:id="@+id/quantity_CaffeLatte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingHorizontal="15dp"/>
+
+                <Button
+                    android:id="@+id/plus_btn_CaffeLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="+"
+                    android:onClick="increment_CaffeLatte"/>
+            </LinearLayout>
+        </TableRow>
+        <!-- 유자차 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="유자차" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:text="3800원" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/min_btn_YujaTea"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="-"
+                    android:onClick="decrement_YujaTea"/>
+
+                <TextView
+                    android:id="@+id/quantity_YujaTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textColor="#000000"
+                    android:paddingHorizontal="15dp"/>
+
+                <Button
+                    android:id="@+id/plus_btn_YujaTea"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="+"
+                    android:onClick="increment_YujaTea"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/payment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="계산하기"
+        android:onClick="calculate_Results"/>
+
+    <TextView
+        android:id="@+id/payment_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:paddingHorizontal="15dp"/>
 
 </LinearLayout>
